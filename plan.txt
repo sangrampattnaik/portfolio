@@ -70,3 +70,7 @@ link
 
 
 
+Education
+Image remove after delete
+Permission
+Admin area

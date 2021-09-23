@@ -1,120 +1,86 @@
-# -*- coding: utf-8 -*-
 from django.contrib import admin
-
 from .models import User, UserDetails, Skills, SkillAttribute, Portfolio, Projects
+from django.http import HttpRequest
+from typing import Optional
+
+class TabularInlineMixin(admin.TabularInline):
+    extra = 2
+
+
+class ModelAdminMixin(admin.ModelAdmin):
+    def has_add_permission(self, request: HttpRequest) -> bool :
+        if request.user.is_superuser:
+            return True
+        return False
+    
+    def has_delete_permission(self, request: HttpRequest, obj=None) -> bool:
+        if request.user.is_superuser:
+            return True
+        return False
+
+
+class SkillAttribueTabularInlne(TabularInlineMixin):
+    model = SkillAttribute
+
+
+class PortfolioInline(TabularInlineMixin):
+    model = Portfolio
+
+
+class ProjectTabularInline(TabularInlineMixin):
+    model = Projects
 
 
 @admin.register(User)
-class UserAdmin(admin.ModelAdmin):
-    list_display = (
-        'id',
-        'password',
-        'last_login',
-        'is_superuser',
-        'username',
-        'is_staff',
-        'is_active',
-        'date_joined',
-        'email',
-        'full_name',
-        'short_name',
-    )
-    list_filter = (
-        'last_login',
-        'is_superuser',
-        'is_staff',
-        'is_active',
-        'date_joined',
-    )
-    raw_id_fields = ('groups', 'user_permissions')
+class UserAdmin(ModelAdminMixin):
+    list_display = ('password','last_login','is_superuser','username','is_staff','is_active','date_joined','email','full_name','short_name')
 
 
 @admin.register(UserDetails)
-class UserDetailsAdmin(admin.ModelAdmin):
-    list_display = (
-        'id',
-        'created',
-        'updated',
-        'user',
-        'mobile',
-        'city',
-        'country',
-        'designation',
-        'description',
-        'contact_me_email',
-        'about_me_text',
-        'about_image',
-        'years_of_exp',
-        'companies_worked',
-        'completed_projects',
-        'cv_in_pdf',
-        'contact_me_new_project_image',
-        'facebook_link',
-        'linkedin_link',
-        'github_link',
-        'youtube_link',
-        'skype_link',
-        'tweeter_link',
-        'instagram_link',
+class UserDetailsAdmin(ModelAdminMixin):
+    list_display = ('created','updated','user','mobile','city','country','designation','description','contact_me_email','about_me_text','about_image','years_of_exp','companies_worked','completed_projects','cv_in_pdf','contact_me_new_project_image','facebook_link','linkedin_link','github_link','youtube_link','skype_link','tweeter_link','instagram_link')
+    list_display_links = list_display
+    inlines = [ProjectTabularInline,PortfolioInline]
+    fieldsets = (
+        (
+            "About Me",{
+                'fields': ['mobile', 'designation', 'description', 'about_me_text', 'about_image','cv_in_pdf']
+            }
+        ),
+        (
+            "Address",{
+                'fields': ['city','country','contact_me_new_project_image']
+            }
+        ),
+        (
+            "Experiene",{
+                'fields': ['years_of_exp','companies_worked','completed_projects']
+            }
+        ),
+        (
+            "Social Links",{
+                'fields': ['facebook_link', 'linkedin_link', 'github_link', 'youtube_link', 'skype_link', 'tweeter_link', 'instagram_link']
+            }
+        )
     )
-    list_filter = ('created', 'updated', 'user')
 
 
 @admin.register(Skills)
-class SkillsAdmin(admin.ModelAdmin):
+class SkillsAdmin(ModelAdminMixin):
+    inlines = [SkillAttribueTabularInlne]
     list_display = (
-        'id',
         'created',
         'updated',
-        'user',
+        'user_details',
         'skill_title',
         'skill_experience',
     )
-    list_filter = ('created', 'updated', 'user')
-
-
-@admin.register(SkillAttribute)
-class SkillAttributeAdmin(admin.ModelAdmin):
-    list_display = (
-        'id',
-        'created',
-        'updated',
-        'skill',
-        'name',
-        'percentage',
+    fieldsets = (
+        (
+            "User Skills",{
+                'fields': ['skill_title','skill_experience']
+            }
+        ),
+        
     )
-    list_filter = ('created', 'updated', 'skill')
-    search_fields = ('name',)
-
-
-@admin.register(Portfolio)
-class PortfolioAdmin(admin.ModelAdmin):
-    list_display = (
-        'id',
-        'created',
-        'updated',
-        'user',
-        'portfolio_image',
-        'portfolio_title',
-        'portfolio_description',
-        'link',
-    )
-    list_filter = ('created', 'updated', 'user')
-
-
-@admin.register(Projects)
-class ProjectsAdmin(admin.ModelAdmin):
-    list_display = (
-        'id',
-        'created',
-        'updated',
-        'user',
-        'project_name',
-        'project_type',
-        'company_name',
-        'start_date',
-        'end_date',
-        'project_link',
-        'github_repository_link',
-    )
-    list_filter = ('created', 'updated', 'user', 'start_date', 'end_date')
+    list_display_links = list_display

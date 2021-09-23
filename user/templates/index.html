@@ -1,0 +1,917 @@
+<!DOCTYPE html>
+<html class="no-js" lang="zxx">
+{% load static %}
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <title>{{ user.full_name }}</title>
+  <meta name="description" content="" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="manifest" href="site.webmanifest" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="shortcut icon" type="image/x-icon" href="{% static 'assets/img/favicon.ico' %}" />
+
+  <!-- CSS here -->
+  <link rel="stylesheet" href="{% static 'assets/css/bootstrap.css' %}" />
+
+  <link rel="stylesheet" href="{% static 'assets/css/slicknav.css' %}" />
+  <link rel="stylesheet" href="{% static 'assets/css/flaticon.css' %}" />
+  <link rel="stylesheet" href="{% static 'assets/css/animate.min' %}.css" />
+  <link rel="stylesheet" href="{% static 'assets/css/magnific-popup' %}.css" />
+  <link rel="stylesheet" href="{% static 'assets/css/fontawesome-all' %}.min.css" />
+  <link rel="stylesheet" href="{% static 'assets/css/themify-icons' %}.css" />
+  <link rel="stylesheet" href="{% static 'assets/css/slick.css' %}" />
+  <link rel="stylesheet" href="{% static 'assets/css/nice-select' %}.css" />
+  <link rel="stylesheet" href="{% static 'assets/css/style.css' %}" />
+  <link rel="stylesheet" href="{% static 'assets/lightbox/simpleLightbox.css' %}" />
+  <link rel="stylesheet" href="{% static 'assets/linericon/style.css' %}" />
+  <link rel="stylesheet" type="text/css" href="your_website_domain/css_root/flaticon.css" />
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light d-none d-md-block">
+    <div class="container-fluid">
+      <div class="ps-5">
+        <a class="navbar-brand fw-bold" href="index.html">Shailendra</a>
+      </div>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse pe-5" id="navbarNavDropdown">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item pe-5 ps-3">
+            <a class="nav-link active fw-bold" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item pe-3 ps-3">
+            <a class="nav-link fw-bold" href="">About</a>
+          </li>
+          <li class="nav-item pe-3 ps-3">
+            <a class="nav-link fw-bold" href="#">Skills</a>
+          </li>
+          <li class="nav-item pe-3 ps-3">
+            <a class="nav-link fw-bold" href="#">Education</a>
+          </li>
+          <li class="nav-item pe-3 ps-3">
+            <a class="nav-link fw-bold" href="#">Portfolio</a>
+          </li>
+          <li class="nav-item pe-3 ps-3">
+            <a class="nav-link fw-bold" href="#">Contact Me</a>
+          </li>
+          <li class="nav-item pe-5 ps-1">
+            <a class="nav-link fw-bold" href="#"><i class="fas fa-moon"></i></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!------------content------------------------------------------------>
+
+  <div class="container" id="home">
+    <div class="row">
+      <div class="col-2 col-md-2 col-lg-2 col-xl-2 headerbox text-center">
+        <ul class="pt-3">
+          <li>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="fab fa-dropbox"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="fab fa-github"></i></a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-4 col-md-4 col-lg-4 col-xl-4 headerbox d-none d-md-block">
+        <h1>Hi,I'am <span>Shailendra</span></h1>
+        <p class="fw-bold greycolor">Frontend Developer</p>
+        <p class="fw-bold greycolor">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime,
+          cupiditate?
+        </p>
+
+        <button type="button" class="btn btn-primary">Contact me</button>
+      </div>
+      <div class="col-4 col-md-4 col-lg-4 col-xl-4 headerbox d-none d-md-block">
+        <img src="assets/img/sc.png" class="img-fluid" />
+      </div>
+      <div class="
+            col-8 col-md-4 col-lg-4 col-xl-4
+            headerbox
+            d-sm-block d-md-none
+          ">
+        <img src="assets/img/sc.png" class="img-fluid" />
+      </div>
+      <div class="col-12 col-md-2 col-lg-2 col-xl-2 headerbox d-none d-md-block"></div>
+      <div class="
+            col-12 col-md-12 col-lg-12 col-xl-12
+            d-md-none d-sm-block
+            ps-5
+            mt-3
+          ">
+        <h1>Hi,I'am <span>Shailendra</span></h1>
+        <p class="fw-bold greycolor">Frontend Developer</p>
+        <p class="fw-bold greycolor">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime,
+          cupiditate?
+        </p>
+        <button type="button" class="btn btn-primary">Contact me</button>
+      </div>
+    </div>
+  </div>
+  <div class="container pt-5" id="about">
+    <div class="text-center mt-5 mb-5">
+      <h1>About Me</h1>
+      <p class="fw-bold greycolor">My Introduction</p>
+    </div>
+    <div class="row">
+      <div class="col-12 col-md-6 col-lg-6 col-xl-6 text-center">
+        <img src="assets/img/gallery/FB_IMG_14529243884417851.jpg" class="img-fluid roundedpic" />
+      </div>
+      <div class="col-12 col-md-6 col-lg-6 col-xl-6 greycolor fw-bold mt-3">
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+          Consequatur earum aut ipsum doloribus, eos quidem recusandae
+          asperiores, et nemo, dolores officiis! Ratione veniam delectus quos.
+        </p>
+        <div class="container mt-5">
+          <div class="row">
+            <div class="four col-md-4">
+              <div class="counter-box">
+                <span class="counter">08</span>
+                <p>Years Experience</p>
+              </div>
+            </div>
+            <div class="four col-md-4">
+              <div class="counter-box">
+                <span class="counter">20</span>
+                <p>Completed Project</p>
+              </div>
+            </div>
+            <div class="four col-md-4">
+              <div class="counter-box">
+                <span class="counter">05</span>
+                <p>Companies Worked</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container mt-5">
+          <button type="button" class="btn btn-primary">Download CV</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container pt-5" id="skill">
+    <div class="text-center mt-5 mb-5">
+      <h1>Skills</h1>
+      <p class="fw-bold greycolor">My Technical Level</p>
+    </div>
+    <div class="row">
+      <div class="col-12 col-md-6 col-lg-6 col-xl-6 text-center">
+        <div class="container">
+          <div class="row mainbox mt-3">
+            <button type="button" class="collapsible">
+              <i class="fas fa-code"></i>
+              <span class="fw-bold">Frontend Developer <span class="textcol">4 year</span></span>
+            </button>
+            <div class="container content">
+              <div class="tools_expert">
+                <div class="skill_main">
+                  <div class="skill_item">
+                    <div class="row">
+                      <div class="col-6 col-md-6">
+                        <h4>Css</h4>
+                      </div>
+                      <div class="col-6 col-md-6">
+                        <span class="counter">80</span>
+                      </div>
+                    </div>
+                    <div class="progress">
+                      <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0"
+                        aria-valuemax="100"></div>
+                    </div>
+                  </div>
+                  <div class="skill_item">
+                    <div class="row">
+                      <div class="col-6 col-md-6">
+                        <h4>Html</h4>
+                      </div>
+                      <div class="col-6 col-md-6">
+                        <span class="counter">80</span>
+                      </div>
+                    </div>
+                    <div class="progress">
+                      <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0"
+                        aria-valuemax="100"></div>
+                    </div>
+                  </div>
+                  <div class="skill_item">
+                    <div class="row">
+                      <div class="col-6 col-md-6">
+                        <h4>Bootstrap</h4>
+                      </div>
+                      <div class="col-6 col-md-6">
+                        <span class="counter">80</span>
+                      </div>
+                    </div>
+                    <div class="progress">
+                      <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0"
+                        aria-valuemax="100"></div>
+                    </div>
+                  </div>
+                  <div class="skill_item">
+                    <div class="row">
+                      <div class="col-6 col-md-6">
+                        <h4>JAVASCRIPT</h4>
+                      </div>
+                      <div class="col-6 col-md-6">
+                        <span class="counter">50</span>
+                      </div>
+                    </div>
+                    <div class="progress">
+                      <div class="progress-bar" role="progressbar" aria-valuenow="50" aria-valuemin="0"
+                        aria-valuemax="100"></div>
+                    </div>
+                  </div>
+                  <div class="skill_item">
+                    <div class="row">
+                      <div class="col-6 col-md-6">
+                        <h4>Jquery</h4>
+                      </div>
+                      <div class="col-6 col-md-6">
+                        <span class="counter">50</span>
+                      </div>
+                    </div>
+                    <div class="progress">
+                      <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0"
+                        aria-valuemax="100"></div>
+                    </div>
+                  </div>
+                  <div class="skill_item">
+                    <div class="row">
+                      <div class="col-6 col-md-6">
+                        <h4>Photoshop</h4>
+                      </div>
+                      <div class="col-6 col-md-6">
+                        <span class="counter">70</span>
+                      </div>
+                    </div>
+                    <div class="progress">
+                      <div class="progress-bar" role="progressbar" aria-valuenow="50" aria-valuemin="0"
+                        aria-valuemax="100"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 col-lg-6 col-xl-6 greycolor fw-bold">
+        <div class="container">
+          <div class="row mainbox mt-3">
+            <button type="button" class="collapsible">
+              <i class="fas fa-address-card"></i>
+              <span class="fw-bold">Designer <span class="textcol">5 year</span></span>
+            </button>
+            <div class="container content">
+              <div class="tools_expert">
+                <div class="skill_main">
+                  <div class="skill_item">
+                    <div class="row">
+                      <div class="col-6 col-md-6">
+                        <h4>Css</h4>
+                      </div>
+                      <div class="col-6 col-md-6">
+                        <span class="counter">80</span>
+                      </div>
+                    </div>
+                    <div class="progress">
+                      <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0"
+                        aria-valuemax="100"></div>
+                    </div>
+                  </div>
+                  <div class="skill_item">
+                    <div class="row">
+                      <div class="col-6 col-md-6">
+                        <h4>Html</h4>
+                      </div>
+                      <div class="col-6 col-md-6">
+                        <span class="counter">80</span>
+                      </div>
+                    </div>
+                    <div class="progress">
+                      <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0"
+                        aria-valuemax="100"></div>
+                    </div>
+                  </div>
+                  <div class="skill_item">
+                    <div class="row">
+                      <div class="col-6 col-md-6">
+                        <h4>Bootstrap</h4>
+                      </div>
+                      <div class="col-6 col-md-6">
+                        <span class="counter">80</span>
+                      </div>
+                    </div>
+                    <div class="progress">
+                      <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0"
+                        aria-valuemax="100"></div>
+                    </div>
+                  </div>
+                  <div class="skill_item">
+                    <div class="row">
+                      <div class="col-6 col-md-6">
+                        <h4>JAVASCRIPT</h4>
+                      </div>
+                      <div class="col-6 col-md-6">
+                        <span class="counter">50</span>
+                      </div>
+                    </div>
+                    <div class="progress">
+                      <div class="progress-bar" role="progressbar" aria-valuenow="50" aria-valuemin="0"
+                        aria-valuemax="100"></div>
+                    </div>
+                  </div>
+                  <div class="skill_item">
+                    <div class="row">
+                      <div class="col-6 col-md-6">
+                        <h4>Jquery</h4>
+                      </div>
+                      <div class="col-6 col-md-6">
+                        <span class="counter">50</span>
+                      </div>
+                    </div>
+                    <div class="progress">
+                      <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0"
+                        aria-valuemax="100"></div>
+                    </div>
+                  </div>
+                  <div class="skill_item">
+                    <div class="row">
+                      <div class="col-6 col-md-6">
+                        <h4>Photoshop</h4>
+                      </div>
+                      <div class="col-6 col-md-6">
+                        <span class="counter">70</span>
+                      </div>
+                    </div>
+                    <div class="progress">
+                      <div class="progress-bar" role="progressbar" aria-valuenow="50" aria-valuemin="0"
+                        aria-valuemax="100"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 col-lg-6 col-xl-6 greycolor fw-bold">
+        <div class="container">
+          <div class="row mainbox mt-3">
+            <button type="button" class="collapsible">
+              <i class="fas fa-code"></i>
+              <span class="fw-bold">Backend Developer <span class="textcol">5 year</span></span>
+            </button>
+            <div class="container content">
+              <div class="tools_expert">
+                <div class="skill_main">
+                  <div class="skill_item">
+                    <div class="row">
+                      <div class="col-6 col-md-6">
+                        <h4>Css</h4>
+                      </div>
+                      <div class="col-6 col-md-6">
+                        <span class="counter">80</span>
+                      </div>
+                    </div>
+                    <div class="progress">
+                      <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0"
+                        aria-valuemax="100"></div>
+                    </div>
+                  </div>
+                  <div class="skill_item">
+                    <div class="row">
+                      <div class="col-6 col-md-6">
+                        <h4>Html</h4>
+                      </div>
+                      <div class="col-6 col-md-6">
+                        <span class="counter">80</span>
+                      </div>
+                    </div>
+                    <div class="progress">
+                      <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0"
+                        aria-valuemax="100"></div>
+                    </div>
+                  </div>
+                  <div class="skill_item">
+                    <div class="row">
+                      <div class="col-6 col-md-6">
+                        <h4>Bootstrap</h4>
+                      </div>
+                      <div class="col-6 col-md-6">
+                        <span class="counter">80</span>
+                      </div>
+                    </div>
+                    <div class="progress">
+                      <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0"
+                        aria-valuemax="100"></div>
+                    </div>
+                  </div>
+                  <div class="skill_item">
+                    <div class="row">
+                      <div class="col-6 col-md-6">
+                        <h4>JAVASCRIPT</h4>
+                      </div>
+                      <div class="col-6 col-md-6">
+                        <span class="counter">50</span>
+                      </div>
+                    </div>
+                    <div class="progress">
+                      <div class="progress-bar" role="progressbar" aria-valuenow="50" aria-valuemin="0"
+                        aria-valuemax="100"></div>
+                    </div>
+                  </div>
+                  <div class="skill_item">
+                    <div class="row">
+                      <div class="col-6 col-md-6">
+                        <h4>Jquery</h4>
+                      </div>
+                      <div class="col-6 col-md-6">
+                        <span class="counter">50</span>
+                      </div>
+                    </div>
+                    <div class="progress">
+                      <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0"
+                        aria-valuemax="100"></div>
+                    </div>
+                  </div>
+                  <div class="skill_item">
+                    <div class="row">
+                      <div class="col-6 col-md-6">
+                        <h4>Photoshop</h4>
+                      </div>
+                      <div class="col-6 col-md-6">
+                        <span class="counter">70</span>
+                      </div>
+                    </div>
+                    <div class="progress">
+                      <div class="progress-bar" role="progressbar" aria-valuenow="50" aria-valuemin="0"
+                        aria-valuemax="100"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container pt-5" id="educate">
+    <div class="text-center mt-5 mb-5">
+      <h1>Qualification</h1>
+      <p class="fw-bold greycolor">My Personal Journey</p>
+    </div>
+    <div class="text-center mt-5 mb-5">
+      <h4><i class="fas fa-graduation-cap"></i> <span>Education</span></h4>
+    </div>
+    <div class="timeline">
+      <div class="cont left">
+        <i class="icon fa fa-home"></i>
+        <div class="contentbox">
+          <h2>Software Engineer</h2>
+          <small>Microsoft -Peru</small>
+          <p><i class="far fa-calendar-times"></i> 2016-2018</p>
+        </div>
+      </div>
+      <div class="cont right">
+        <i class="icon fa fa-gift"></i>
+        <div class="contentbox">
+          <h2>Software Engineer</h2>
+          <small>Microsoft -Peru</small>
+          <p><i class="far fa-calendar-times"></i> 2016-2018</p>
+        </div>
+      </div>
+      <div class="cont left">
+        <i class="icon fa fa-user"></i>
+        <div class="contentbox">
+          <h2>Software Engineer</h2>
+          <small>Microsoft -Peru</small>
+          <p><i class="far fa-calendar-times"></i> 2016-2018</p>
+        </div>
+      </div>
+    </div>
+    <div class="text-center mt-5 mb-5">
+      <h4><i class="fas fa-suitcase"></i> <span>WORK</span></h4>
+    </div>
+    <div class="container">
+      <ul class="nav nav-pills mb-3 d-flex justify-content-center" id="pills-tab" role="tablist">
+        <li class="nav-item" role="presentation">
+          <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home"
+            type="button" role="tab" aria-controls="pills-home" aria-selected="true">
+            Personal Work
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile"
+            type="button" role="tab" aria-controls="pills-profile" aria-selected="false">
+            Professional work
+          </button>
+        </li>
+      </ul>
+      <div class="tab-content" id="pills-tabContent">
+        <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+          <div class="timeline">
+            <div class="cont left">
+              <i class="icon fa fa-home"></i>
+              <div class="contentbox">
+                <h2>Software Engineer</h2>
+                <small>Microsoft -Peru</small>
+                <p><i class="far fa-calendar-times"></i> 2016-2018</p>
+              </div>
+            </div>
+            <div class="cont right">
+              <i class="icon fa fa-gift"></i>
+              <div class="contentbox">
+                <h2>Software Engineer</h2>
+                <small>Microsoft -Peru</small>
+                <p><i class="far fa-calendar-times"></i> 2016-2018</p>
+              </div>
+            </div>
+            <div class="cont left">
+              <i class="icon fa fa-user"></i>
+              <div class="contentbox">
+                <h2>Software Engineer</h2>
+                <small>Microsoft -Peru</small>
+                <p><i class="far fa-calendar-times"></i> 2016-2018</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+          <div class="timeline">
+            <div class="cont left">
+              <i class="icon fa fa-home"></i>
+              <div class="contentbox">
+                <h2>Software Engineer</h2>
+                <small>Microsoft -Peru</small>
+                <p><i class="far fa-calendar-times"></i> 2016-2018</p>
+              </div>
+            </div>
+            <div class="cont right">
+              <i class="icon fa fa-gift"></i>
+              <div class="contentbox">
+                <h2>Software Engineer</h2>
+                <small>Microsoft -Peru</small>
+                <p><i class="far fa-calendar-times"></i> 2016-2018</p>
+              </div>
+            </div>
+            <div class="cont left">
+              <i class="icon fa fa-user"></i>
+              <div class="contentbox">
+                <h2>Software Engineer</h2>
+                <small>Microsoft -Peru</small>
+                <p><i class="far fa-calendar-times"></i> 2016-2018</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container pt-5" id="port">
+    <div class="text-center mt-5 mb-5">
+      <h1>Portfolio</h1>
+      <p class="fw-bold greycolor">Most Recent Work</p>
+    </div>
+    <div class="container-owl">
+      <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="card mb-3" style="max-width: 850px; width: 100%">
+              <div class="row g-0">
+                <div class="col-md-5">
+                  <img src="assets/img/gallery/OIP.jpg" class="img-fluid rounded-start" alt="..." />
+                </div>
+                <div class="col-md-7">
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">
+                      This is a wider card with supporting text below as a
+                      natural lead-in to additional content. This content is a
+                      little bit longer.
+                    </p>
+                    <button type="button" class="btn btn-primary">
+                      Demo
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="card mb-3" style="max-width: 850px; width: 100%">
+              <div class="row g-0">
+                <div class="col-md-5">
+                  <img src="assets/img/gallery/OIP.jpg" class="img-fluid rounded-start" alt="..." />
+                </div>
+                <div class="col-md-7">
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">
+                      This is a wider card with supporting text below as a
+                      natural lead-in to additional content. This content is a
+                      little bit longer.
+                    </p>
+                    <button type="button" class="btn btn-primary">
+                      Demo
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="card mb-3" style="max-width: 850px; width: 100%">
+              <div class="row g-0">
+                <div class="col-md-5">
+                  <img src="assets/img/gallery/OIP.jpg" class="img-fluid rounded-start" alt="..." />
+                </div>
+                <div class="col-md-7">
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">
+                      This is a wider card with supporting text below as a
+                      natural lead-in to additional content. This content is a
+                      little bit longer.
+                    </p>
+                    <button type="button" class="btn btn-primary">
+                      Demo
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+          data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+          data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="container mt-5">
+    <div class="row rounded" style="background: #8974f2">
+      <div class="col-12 col-md-6 col-lg-6 p-5">
+        <h1 class="text-light">You have a new project</h1>
+        <p class="text-light fw-bold">
+          Contact me now and get a 30% discount on your new project
+        </p>
+        <button type="button" class="btn btn-light text-primary">
+          Contact Me
+        </button>
+      </div>
+      <div class="col-12 col-md-6 col-lg-6">
+        <img src="assets/img/gallery/man.png" class="img-fluid d-none d-sm-block" />
+        <img src="assets/img/gallery/man2.png" class="img-fluid d-sm-block d-md-none" />
+      </div>
+    </div>
+  </div>
+  <div class="container" id="contact">
+    <div class="text-center mt-5 mb-5">
+      <h1>Contact Me</h1>
+      <p class="fw-bold greycolor">Get In Touch</p>
+    </div>
+    <div class="row">
+      <div class="col-12 col-md-6 col-lg-6">
+        <ul>
+          <li>
+            <i class="fas fa-phone fa-2x"></i>
+            <span class="fw-bold fs-4 ms-md-2">Call Me</span>
+            <p class="greycolor fw-bold ms-md-5">8800765228</p>
+          </li>
+          <li>
+            <i class="fas fa-envelope fa-2x"></i>
+            <span class="fw-bold fs-4 ms-md-2">Email</span>
+            <p class="greycolor fw-bold ms-md-5">
+              shailchaudhary4499@gmail.com
+            </p>
+          </li>
+          <li>
+            <i class="fas fa-map-marker-alt fa-2x"></i>
+            <span class="fw-bold fs-4 ms-md-2">Location</span>
+            <p class="greycolor fw-bold ms-md-5">Ghaziabad,Uttarpradesh</p>
+          </li>
+        </ul>
+      </div>
+      <div class="col-12 col-md-6 col-lg-6">
+        <form>
+          <div class="row">
+            <div class="col-12 col-md-6 mb-3">
+              <input type="text" class="form-control" placeholder="Name" aria-label="Name" />
+            </div>
+            <div class="col-12 col-md-6 mb-3">
+              <input type="email" class="form-control" placeholder="Email" aria-label="Email" />
+            </div>
+            <div class="col-12 col-md-12 mb-3">
+              <input type="text" class="form-control" placeholder="Project" aria-label="Project" />
+            </div>
+            <div class="col-12 col-md-12 mb-3">
+              <textarea class="form-control" placeholder="Message" id="floatingTextarea2"
+                style="height: 100px"></textarea>
+            </div>
+          </div>
+          <div class="col-auto">
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="container-fluid mt-5" style="background: #818eeb">
+    <div class="row">
+      <div class="col-12 col-md-4 p-5">
+        <h1 class="text-light ms-5 mt-5">Shailendra</h1>
+        <p class="text-light fw-bold ms-5">Frontend Developer</p>
+      </div>
+      <div class="col-12 col-md-4 text-center pt-5">
+        <ul class="list-inline list-style">
+          <li class="list-inline-item text-light fw-bold">
+            <a href="">Education</a>
+          </li>
+          <li class="list-inline-item text-light fw-bold">
+            <a href="">Portfolio</a>
+          </li>
+          <li class="list-inline-item text-light fw-bold">
+            <a href="">Contact Me</a>
+          </li>
+        </ul>
+        <div class="text-center">
+          <p class="text-light fw-bold">teamzordan @ All right reserve</p>
+          <p class="text-dark fw-bold">Designed By Shailender</p>
+          <p class="text-dark fw-bold">Developed By Sangram</p>
+        </div>
+      </div>
+      <div class="col-12 col-md-4 text-center pt-5">
+        <ul class="list-inline">
+          <li class="list-inline-item text-light fw-bold ms-2">
+            <i class="fab fa-facebook"></i>
+          </li>
+          <li class="list-inline-item text-light fw-bold ms-2">
+            <i class="fab fa-instagram"></i>
+          </li>
+          <li class="list-inline-item text-light fw-bold ms-2">
+            <i class="fab fa-twitter"></i>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <nav class="
+        navbar navbar-expand-lg navbar-light
+        bg-light
+        fixed-bottom
+        d-sm-block d-md-none
+      ">
+    <div class="container-fluid">
+      <div class="collapse navbar-collapse text-center" id="navbarNavDropdown">
+        <div class="row">
+          <div class="col-4 text-center">
+            <i class="fas fa-home"></i>
+            <p class="fw-bold"><a href="#home">Home</a></p>
+          </div>
+          <div class="col-4 text-center">
+            <i class="fas fa-user"></i>
+            <p class="fw-bold"><a href="#about">About</a></p>
+          </div>
+          <div class="col-4 text-center">
+            <i class="far fa-file-alt"></i>
+            <p class="fw-bold"><a href="#skill">Skills</a></p>
+          </div>
+          <div class="col-4 text-center">
+            <i class="fab fa-servicestack"></i>
+            <p class="fw-bold"><a href="#educate">Education</a></p>
+          </div>
+          <div class="col-4 text-center">
+            <i class="far fa-images"></i>
+            <p class="fw-bold"><a href="#port">Portfolio</a></p>
+          </div>
+          <div class="col-4 text-center">
+            <i class="fab fa-telegram-plane"></i>
+            <p class="fw-bold"><a href="#contact">contact Me</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="ps-2">
+        <a class="navbar-brand fw-bold" href="index.html">Shailendra</a>
+      </div>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fas fa-th-large navbar-toggler-icon"></i>
+      </button>
+    </div>
+  </nav>
+  <!---------bottom navigation-->
+  <!-- JS here -->
+  <!-- All JS Custom Plugins Link Here here -->
+
+  <script>
+    $(document).ready(function () {
+      $(".counter").each(function () {
+        $(this)
+          .prop("Counter", 0)
+          .animate(
+            {
+              Counter: $(this).text(),
+            },
+            {
+              duration: 4000,
+              easing: "swing",
+              step: function (now) {
+                $(this).text(Math.ceil(now));
+              },
+            }
+          );
+      });
+    });
+  </script>
+  <script>
+    var coll = document.getElementsByClassName("collapsible");
+    var i;
+
+    for (i = 0; i < coll.length; i++) {
+      coll[i].addEventListener("click", function () {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.display === "block") {
+          content.style.display = "none";
+        } else {
+          content.style.display = "block";
+        }
+      });
+    }
+  </script>
+
+  <!-- Jquery, Popper, Bootstrap -->
+  <script src="{% static '/assets/js/vendor/jquery-1.12.4.min.js' %}"></script>
+  <script src="{% static '/assets/js/popper.min.js' %}"></script>
+  <script src="{% static '/assets/js/bootstrap.min.js' %}"></script>
+  <!-- Jquery Mobile Menu -->
+  <script src="{% static '/assets/js/jquery.slicknav.min.js' %}"></script>
+
+  <!-- Jquery Slick , Owl-Carousel Plugins -->
+
+  <script src="{% static '/assets/js/slick.min.js' %}"></script>
+  <!-- One Page, Animated-HeadLin -->
+  <script src="{% static '/assets/js/wow.min.js' %}"></script>
+  <script src="{% static '/assets/js/animated.headline.js' %}"></script>
+  <script src="{% static '/assets/js/jquery.magnific-popup.js' %}"></script>
+
+  <!-- Nice-select, sticky -->
+  <script src="{% static '/assets/js/jquery.nice-select.min.js' %}"></script>
+  <script src="{% static '/assets/js/jquery.sticky.js' %}"></script>
+
+  <script src="{% static '/assets/js/contact.js' %}"></script>
+  <script src="{% static '/assets/js/jquery.form.js' %}"></script>
+  <script src="{% static '/assets/js/jquery.validate.min.js' %}"></script>
+  <script src="{% static '/assets/js/mail-script.js' %}"></script>
+  <script src="{% static '/assets/js/jquery.ajaxchimp.min.js' %}"></script>
+
+  <!-- Jquery Plugins, main Jquery -->
+  <script src="{% static '/assets/js/plugins.js' %}"></script>
+  <script src="{% static '/assets/js/main.js' %}"></script>
+  <script src="{% static 'js/jquery-3.2.1.min.js' %}"></script>
+  <script src="{% static 'js/popper.js' %}"></script>
+  <script src="{% static 'js/bootstrap.min.js' %}"></script>
+  <script src="{% static 'js/stellar.js' %}"></script>
+  <script src="{% static 'vendors/lightbox/simpleLightbox.min.js' %}"></script>
+  <script src="{% static 'vendors/nice-select/js/jquery.nice-select.min.js' %}"></script>
+  <script src="{% static 'vendors/isotope/imagesloaded.pkgd.min.js' %}"></script>
+  <script src="{% static 'vendors/isotope/isotope-min.js' %}"></script>
+
+  <script src="{% static 'js/jquery.ajaxchimp.min.js' %}"></script>
+  <script src="{% static 'vendors/counter-up/jquery.waypoints.min.js' %}"></script>
+  <script src="{% static 'vendors/counter-up/jquery.counterup.min.js' %}"></script>
+  <script src="{% static 'js/mail-script.js' %}"></script>
+  <!--gmaps Js-->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjCGmQ0Uq4exrzdcL6rvxywDDOvfAu6eE"></script>
+  <script src="{% static 'js/gmaps.min.js' %}"></script>
+  <script src="{% static 'js/theme.js' %}"></script>
+</body>
+
+</html>
