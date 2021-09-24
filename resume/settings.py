@@ -14,7 +14,7 @@ SECRET_KEY = 'django-insecure-fj2wk-^m6^qi0d#f%1_9-=1304etp&(0#eoaqb9ucrbkbf0x*s
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -139,10 +139,10 @@ JAZZMIN_SETTINGS = {
     "site_icon": None,
 
     # Welcome text on the login screen
-    "welcome_sign": "Welcome to the Sporket",
+    "welcome_sign": "Welcome to the Resume",
 
     # Copyright on the footer
-    "copyright": "sporket india private limited",
+    "copyright": "resume private limited",
 
     # Field name on user model that contains avatar image
     "user_avatar": None,
@@ -169,9 +169,9 @@ JAZZMIN_SETTINGS = {
     # Custom icons for side menu apps/models See https://fontawesome.com/icons?d=gallery&m=free&v=5.0.0,5.0.1,5.0.10,5.0.11,5.0.12,5.0.13,5.0.2,5.0.3,5.0.4,5.0.5,5.0.6,5.0.7,5.0.8,5.0.9,5.1.0,5.1.1,5.2.0,5.3.0,5.3.1,5.4.0,5.4.1,5.4.2,5.13.0,5.12.0,5.11.2,5.11.1,5.10.0,5.9.0,5.8.2,5.8.1,5.7.2,5.7.1,5.7.0,5.6.3,5.5.0,5.4.2
     # for the full list of 5.13.0 free icon classes
     "icons": {
-        "auth": "fas fa-users-cog",
-        "user.User": "fas fa-user",
-        "user.UserDetails": "fas fa-tachometer-alt",
+        # "auth": "fas fa-users-cog",
+        # "user.User": "fas fa-user",
+        "user.UserDetails": "fas fa-user",
         "user.Skills": "fas fa-brain"
     },
     

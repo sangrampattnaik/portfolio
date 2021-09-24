@@ -1,76 +1,14 @@
-User
-=====
-username
-full_name
-short_name
-password
-top_image
-
-
-UserDetails
-==========
-mobile_number
-contact_me_email
-city
-country
-designation
-description
-social links -> fb, insta, linekdin, gityhub
-about_me_text
-about_image
-years_of_exp
-companies_worked
-completed_projects
-cv_in_pdf
-contact_me_new_project_image
-
-
-
-skils
-=====
-user_id 12m
-skill_name
-skill_exp
-
-
-skill_attributes
-================
-skills_id 12m 
-attribute_name
-attribute_percentage
-
-
 
 Qualification
 =============
 user_id 12m
 
 
-
-projects
-=========
-user_id 12m
-project_name
-project_type (company,personal)
-company_name
-from
-to
-link
-github_link
-
-
-portfolio
-=========
-user_id 12m
-portfolio_image
-portfolio_title
-portfolio_desc
-link
-
-
-
-
+Remaining Work
+===============
 Education
 Image remove after delete
-Permission
 Admin area
+Permission assign on adding user
+404 page overide
+add user form 

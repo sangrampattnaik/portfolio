@@ -2,20 +2,23 @@ from django.contrib import admin
 from .models import User, UserDetails, Skills, SkillAttribute, Portfolio, Projects
 from django.http import HttpRequest
 from typing import Optional
+from django.contrib.auth.models import Group
+
+admin.site.unregister(Group)
+
 
 class TabularInlineMixin(admin.TabularInline):
     extra = 2
 
 
 class ModelAdminMixin(admin.ModelAdmin):
-    def has_add_permission(self, request: HttpRequest) -> bool :
-        if request.user.is_superuser:
-            return True
+    # def has_change_permission(self, request: HttpRequest, obj: Optional[_ModelT] = ...) -> bool:
+    #     return super().has_change_permission(request, obj=obj)
+
+    def has_delete_permission(self, request: HttpRequest, obj=None) -> bool:
         return False
     
-    def has_delete_permission(self, request: HttpRequest, obj=None) -> bool:
-        if request.user.is_superuser:
-            return True
+    def has_add_permission(self, request: HttpRequest) -> bool:
         return False
 
 
@@ -29,11 +32,6 @@ class PortfolioInline(TabularInlineMixin):
 
 class ProjectTabularInline(TabularInlineMixin):
     model = Projects
-
-
-@admin.register(User)
-class UserAdmin(ModelAdminMixin):
-    list_display = ('password','last_login','is_superuser','username','is_staff','is_active','date_joined','email','full_name','short_name')
 
 
 @admin.register(UserDetails)

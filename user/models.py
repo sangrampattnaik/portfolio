@@ -3,9 +3,24 @@ from django.db import models
 from django.contrib.auth.models import AbstractUser
 from django.utils.translation import gettext_lazy as _
 import datetime
+from django.core.exceptions import ValidationError
 import os
 from uuid import uuid4
 
+
+def validate_image(fieldfile_obj):
+    if not fieldfile_obj.file.name.split('.')[-1] in ['png','jpg','jpeg']:
+        raise ValidationError("Invalid image file...plz provide valid format")
+    filesize = fieldfile_obj.file.size
+    megabyte_limit = 2.0
+    if filesize > megabyte_limit*1024*1024:
+        raise ValidationError("Max file size is %sMB" % str(megabyte_limit))
+
+
+def validate_pdf(fieldfile_obj):
+    if not fieldfile_obj.file.name.split('.')[-1] in ['pdf']:
+        raise ValidationError("Invalid image file...plz provide valid format")
+    
 
 def path_and_rename(instance, filename):
     upload_to = 'media_files'
@@ -52,11 +67,11 @@ class UserDetails(TimeStampMixin):
     description = models.TextField(_("Description"))
     contact_me_email = models.EmailField(_("Contact me email"),null=True,blank=True,help_text="It will on display on Contact me email")
     about_me_text = models.TextField(_("About me"))
-    about_image = models.ImageField(_("About Image"),upload_to=path_and_rename)
+    about_image = models.ImageField(_("About Image"),upload_to=path_and_rename,validators=[validate_image])
     years_of_exp = models.PositiveIntegerField(_("Experience in years"))
     companies_worked = models.PositiveIntegerField(_("Number of companies worked"))
     completed_projects = models.PositiveIntegerField(_("Number of Completed projecrts"))
-    cv_in_pdf = models.FileField(_("Resume/CV"),help_text=".pdf allowed only",upload_to=path_and_rename)
+    cv_in_pdf = models.FileField(_("Resume/CV"),help_text=".pdf allowed only",upload_to=path_and_rename,validators=[validate_pdf])
     contact_me_new_project_image = models.ImageField(_("Contact me image"),upload_to=path_and_rename)
     facebook_link = models.URLField(_("Facebook link"),null=True,blank=True)
     linkedin_link = models.URLField(_("Linkedin link"),null=True,blank=True)
@@ -67,7 +82,7 @@ class UserDetails(TimeStampMixin):
     instagram_link = models.URLField(_("Instagra Link"),null=True,blank=True)
     
     class Meta:
-        verbose_name_plural = 'Dashboard'
+        verbose_name_plural = 'User Details'
 
 
 class Skills(TimeStampMixin):
