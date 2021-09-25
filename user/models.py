@@ -121,3 +121,11 @@ class Projects(TimeStampMixin):
     end_date = models.DateField(help_text="end date", blank=True, null=True)
     project_link = models.URLField(_("project link"), blank=True, null=True)
     github_repository_link = models.URLField(_("Github repository link"), blank=True, null=True)
+
+
+class Qualification(TimeStampMixin):
+    user_details = models.ForeignKey(UserDetails, on_delete=models.CASCADE, related_name="qualifications")
+    name = models.CharField(_("Qualification Name"),max_length=200)
+    from_to_year = models.CharField(_("From to year"),max_length=20,help_text="2017-2019")
+    institute = models.CharField(_("Institute"),max_length=256,help_text="Delhi, JNU")
+    

@@ -16,7 +16,6 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
-
 # Application definition
 
 INSTALLED_APPS = [
@@ -127,7 +126,7 @@ JAZZMIN_SETTINGS = {
     "site_title": "Resume Adminstration",
 
     # Title on the brand, and login screen (19 chars max) (defaults to current_admin_site.site_header if absent or None)
-    "site_header": "Resume Admin",
+    "site_header": "User Resume",
 
     # Logo to use for your site, must be present in static files, used for brand on top left
     "site_logo": "logo/logo.jpg",
