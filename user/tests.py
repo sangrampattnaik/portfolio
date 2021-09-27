@@ -1,3 +1,11 @@
-from django.test import TestCase
 
-# Create your tests here.
+x = 10
+y = 100
+
+if not True:
+    print('True')
+else:
+    print('False')
+
+
+

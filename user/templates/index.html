@@ -33,7 +33,7 @@
   <nav class="navbar navbar-expand-lg navbar-light bg-light d-none d-md-block">
     <div class="container-fluid">
       <div class="ps-5">
-        <a class="navbar-brand fw-bold" href="index.html">Shailendra</a>
+        <a class="navbar-brand fw-bold" href="{% url 'index' user.username %}">Shailendra</a>
       </div>
 
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
@@ -73,29 +73,34 @@
     <div class="row">
       <div class="col-2 col-md-2 col-lg-2 col-xl-2 headerbox text-center">
         <ul class="pt-3">
+          {% if user.user_details.linkedin_link %}
           <li>
-            <a href="#"><i class="fab fa-linkedin"></i></a>
+            <a href="{{user.user_details.instagram_link}}"><i class="fab fa-linkedin"></i></a>
           </li>
+          {% endif %}
+
+          {% if user.user_details.github_link %}
           <li>
-            <a href="#"><i class="fab fa-dropbox"></i></a>
+            <a href="{{user.user_details.instagram_link}}"><i class="fab fa-github"></i></a>
           </li>
+          {% endif %}
+
+          {% if user.user_details.instagram_link %}
           <li>
-            <a href="#"><i class="fab fa-github"></i></a>
+            <a href="{{user.user_details.instagram_link}}"><i class="fab fa-instagram"></i></a>
           </li>
+          {% endif %}
         </ul>
       </div>
       <div class="col-4 col-md-4 col-lg-4 col-xl-4 headerbox d-none d-md-block">
-        <h1>Hi,I'am <span>Shailendra</span></h1>
-        <p class="fw-bold greycolor">Frontend Developer</p>
-        <p class="fw-bold greycolor">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime,
-          cupiditate?
-        </p>
+        <h1>Hi,I'am <span>{{ user.short_name}}</span></h1>
+        <p class="fw-bold greycolor">{{ user.user_details.designation }}</p>
+        <p class="fw-bold greycolor">{{ user.user_details.description }}</p>
 
         <button type="button" class="btn btn-primary">Contact me</button>
       </div>
       <div class="col-4 col-md-4 col-lg-4 col-xl-4 headerbox d-none d-md-block">
-        <img src="assets/img/sc.png" class="img-fluid" />
+        <img src="{{ user.user_details.designation }}" class="img-fluid" />
       </div>
       <div class="
             col-8 col-md-4 col-lg-4 col-xl-4
@@ -128,7 +133,7 @@
     </div>
     <div class="row">
       <div class="col-12 col-md-6 col-lg-6 col-xl-6 text-center">
-        <img src="assets/img/gallery/FB_IMG_14529243884417851.jpg" class="img-fluid roundedpic" />
+        <img src="{{user.user_details}}" class="img-fluid roundedpic" />
       </div>
       <div class="col-12 col-md-6 col-lg-6 col-xl-6 greycolor fw-bold mt-3">
         <p>

@@ -56,11 +56,14 @@ class User(AbstractUser):
 
     class Meta:
         verbose_name_plural = 'User'
+        
+    def __str__(self) -> str:
+        return self.full_name
 
 
 class UserDetails(TimeStampMixin):
     user = models.OneToOneField(User,on_delete=models.CASCADE,related_name='user_details')
-    mobile = models.CharField(_("Mobile Number"),max_length=10, unique=True)
+    mobile = models.CharField(_("Mobile Number"),max_length=10, unique=True,help_text='Mobile number')
     city = models.CharField(_("City"),max_length=100)
     country = models.CharField(_("Country"),max_length=100)
     designation = models.CharField(_("Designation"),max_length=100)
@@ -83,6 +86,9 @@ class UserDetails(TimeStampMixin):
     
     class Meta:
         verbose_name_plural = 'User Details'
+
+    def __str__(self) -> str:
+        return self.user.full_name
 
 
 class Skills(TimeStampMixin):
@@ -128,4 +134,5 @@ class Qualification(TimeStampMixin):
     name = models.CharField(_("Qualification Name"),max_length=200)
     from_to_year = models.CharField(_("From to year"),max_length=20,help_text="2017-2019")
     institute = models.CharField(_("Institute"),max_length=256,help_text="Delhi, JNU")
+    
     

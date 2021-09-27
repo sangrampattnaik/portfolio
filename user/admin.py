@@ -1,7 +1,6 @@
 from django.contrib import admin
 from .models import User, UserDetails, Skills, SkillAttribute, Portfolio, Projects,Qualification
 from django.http import HttpRequest, HttpResponse
-from . import forms
 from typing import Optional
 from django.contrib.auth.models import Group
 
@@ -10,6 +9,7 @@ admin.site.unregister(Group)
 
 class CustomAdminSiteForUser(admin.AdminSite):
     site_header = 'User'
+    
 
 class TabularInlineMixin(admin.TabularInline):
     extra = 2
@@ -32,14 +32,13 @@ class ProjectTabularInline(TabularInlineMixin):
 
 
 class UserDetailsAdmin(admin.ModelAdmin):
-    form = forms.UserDeatilForm
     list_display = ('created','updated','user','mobile','city','country','designation','description','contact_me_email','about_me_text','about_image','years_of_exp','companies_worked','completed_projects','cv_in_pdf','contact_me_new_project_image','facebook_link','linkedin_link','github_link','youtube_link','skype_link','tweeter_link','instagram_link')
     list_display_links = list_display
     inlines = [ProjectTabularInline,PortfolioInline,QualificationTabularInlne]
     fieldsets = (
         (
             "About Me",{
-                'fields': ['mobile', 'designation', 'description', 'about_me_text', 'about_image','cv_in_pdf']
+                'fields': ['user','mobile', 'designation', 'description', 'about_me_text', 'about_image','cv_in_pdf']
             }
         ),
         (
@@ -58,11 +57,15 @@ class UserDetailsAdmin(admin.ModelAdmin):
             }
         )
     )
+    
+    # def add_view(self, request: HttpRequest, form_url: str = ..., extra_context: None = ...) -> HttpResponse:
+    #     # breakpoint()
+    #     self.get_form(request)(user=request.user)
+    #     return super().add_view(request, form_url=form_url, extra_context=extra_context)
 
 
 class SkillsAdmin(admin.ModelAdmin):
     inlines = [SkillAttribueTabularInlne]
-    form = forms.SkillForm
     list_display = (
         'created',
         'updated',
@@ -73,7 +76,7 @@ class SkillsAdmin(admin.ModelAdmin):
     fieldsets = (
         (
             "User Skills",{
-                'fields': ['skill_title','skill_experience']
+                'fields': ['user_details','skill_title','skill_experience']
             }
         ),
         

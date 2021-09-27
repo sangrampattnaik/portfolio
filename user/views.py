@@ -27,6 +27,7 @@ def validate_user_api(request):
     else:
         return JsonResponse({"message":"method not allowed"},status=405)
 
+
 def add_user(request):
     try:
         if request.method == "POST":
